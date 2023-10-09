@@ -264,7 +264,69 @@ font-family: 'Jost', sans-serif;
         height: auto;
 
     }
-    #aboutus-story #banner-2 {
+}
+
+@media screen and (max-width: 660px) {
+    #aboutus-story .banner-1 img{
+        height: 300px;
+        width: 350px;
+        margin-bottom: 20px;
+        margin-left: 60px;
+    }
+    
+    #aboutus-story .banner-2-3 img {
+        height: 300px;
+        width: 350px;
+        margin-left: 60px;
+
     }
 }
+@media screen and (max-width: 430px) {
+    #aboutus-story .banner-1 img{
+        height: 200px;
+        width: 250px;
+        margin-bottom: 20px;
+        margin-left: 60px;
+    }
+    
+    #aboutus-story .banner-2-3 img {
+        height: 200px;
+        width: 250px;
+        margin-left: 60px;
+
+    }
+}
+
+@media screen and (max-width: 330px) {
+    #aboutus-story .banner-1 img{
+        height: 150px;
+        width: 200px;
+        margin-bottom: 20px;
+        margin-left: 50px;
+    }
+    
+    #aboutus-story .banner-2-3 img {
+        height: 150px;
+        width: 200px;
+        margin-left: 50px;
+
+    }
+}
+
+@media screen and (max-width: 260px) {
+    #aboutus-story .banner-1 img{
+        height: 100px;
+        width: 150px;
+        margin-bottom: 20px;
+        margin-left: 50px;
+    }
+    
+    #aboutus-story .banner-2-3 img {
+        height: 100px;
+        width: 150px;
+        margin-left: 50px;
+
+    }
+}
+
 
