@@ -24,6 +24,33 @@ body {
     text-align: center;
 }
 
+/* slick slider style */
+
+.slick-dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-65%, 80px);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 4px;
+}
+
+.slick-dots button {
+    font-size: 0;
+    width: 13px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #83868c;
+    background-color: #adadad00;
+    cursor: pointer;
+}
+
+.slick-dots .slick-active button {
+    background-color: #83868c;
+}
 
 /*it's your choice */
 
@@ -220,6 +247,9 @@ body {
     transform: scale(1.04);
     transition: all 0.8s linear;
 }
+
+
+
 .banner-items:hover .banner-content {
     opacity: 1;
     transition: all 0.5s linear;
@@ -264,6 +294,70 @@ body {
     z-index: 1;
 }
 
+/* run banner */
+
+.banner-run-box {
+    position: relative;
+    transition: all .5s linear;
+}
+
+.run-img {
+    overflow: hidden;
+}
+
+.run-button {
+    background: black;
+}
+.run-button h1{
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    font-family: Jost;
+    text-transform: unset;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+.run-button a {
+    display: inline-block;
+    position: absolute;
+    width: 173px;
+    height: 44px;
+    background-color: #fff;
+    top: 77%;
+   left: 620px;
+    text-align: center;
+   padding-top: 15px;
+   color: black;
+   text-decoration: none;
+   transition: all 0.3s ease;
+   font-size: 14px;
+   font-family: Jost;
+   font-weight: 500;
+   letter-spacing: 2px;
+   line-height: 1;
+}
+
+.run-button a:hover {
+    background-color: #2786b6;
+    color: #fff;
+}
+
+
+
+.run-img:hover img {
+    transform: scale(1.04);
+    transition: transform 0.8s linear, filter 0.8s linear;
+    transition-delay: 0.2s;
+}
+
+.run-img img {
+    transform: scale(1);
+    transition: transform 0.8s linear, filter 0.8s linear;
+    transition-delay: 0.2s; 
+}
+
 /*blog section */
 
 .blog-section {
@@ -271,7 +365,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 110px;
     text-align: center;
 }
 .blog-section .blog-line {
@@ -281,33 +375,76 @@ body {
     margin-bottom: 50px;
 }
 
-.blog-section .blog-content .blog-cate  {
+.blog-section .homepage-blog-img img {
+    transition: all 0.3s ease;
+}
+
+.blog-section .homepage-blog-img img:hover {
+    opacity: 0.7;
+}
+
+.blog-section .homepage-blog-content .blog-cate  {
     color: #83868c;
     text-decoration: none;
 }
-.blog-section .blog-content .blog-cate:hover {
+.blog-section .homepage-blog-content .blog-cate:hover {
     color: #51adcd;
 }
 
-.blog-section .blog-content .blog-title{
+.blog-section .homepage-blog-content .homepage-blog-title{
     color: #000000;
     text-decoration: none;
     transition: all 0.2s ease;
 }
-.blog-section .blog-content .blog-title:hover {
+.blog-section .homepage-blog-content .homepage-blog-title:hover {
     color: #51adcd;
 }
 
-.blog-section .blog-content hr {
+.blog-section .homepage-blog-content hr {
     width: 50px;
     background-color: #51adcd;
     margin-bottom: 15px;
 }
 
-.blog-section .blog-content .blog-short {
+.blog-section .homepage-blog-content .blog-short {
     color: #83868c;
     font-size: 16px;
 }
+
+.blog-date {
+    position: absolute;
+    background-color: #fff;
+    top: 35px;
+    left: 50px;
+    width: 68px;
+    height: 68px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.blog-date hr {
+    margin: 0 auto;
+    width: 28px;
+    background: #000;
+}
+
+.blog-date .day {
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+
+}
+
+.blog-date .month {
+    font-size: 10px;
+    display: block;
+    padding-top: 4px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+/* banner run */
+
+
 
 @media screen and (max-width: 1440px) {
     .product-box {
