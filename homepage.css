@@ -9,10 +9,10 @@ body {
 /* motivation */
 
 .motivation-product .motivation-line {
-    width: 90px;
-    height: 1px;
+
     background-color: #51adcd;
     margin-bottom: 50px;
+    border: none;
 }
 
 .motivation-product{
@@ -22,6 +22,22 @@ body {
     align-items: center;
     margin-top: 50px;
     text-align: center;
+}
+
+.motivation-product .motivation-title {
+    position: relative;
+    padding-bottom: 15px;
+  }
+  
+  .motivation-title::after {
+    content: "";
+    display: block;
+    width: 90px; 
+    border-bottom: 2px solid #51adcd;
+    position: absolute;
+    bottom: 0;
+    left: 47%; 
+  
 }
 
 /* slick slider style */
@@ -69,6 +85,22 @@ body {
     text-align: center;
 }
 
+.your-choice-product .product-slider-heading {
+    position: relative;
+    padding-bottom: 15px;
+  }
+  
+  .product-slider-heading::after {
+    content: "";
+    display: block;
+    width: 90px; 
+    border-bottom: 2px solid #51adcd;
+    position: absolute;
+    bottom: 0;
+    left: 47%; 
+}
+
+
 .new-arrivals {
     border: none;
     cursor: pointer;
@@ -79,6 +111,7 @@ body {
     color: #fff;
     background: #51adcd;
     margin-bottom: 50px;
+    margin-top: 20px;
 }
 
 /* product */
@@ -385,13 +418,17 @@ body {
     align-items: center;
     margin-top: 110px;
     text-align: center;
+    margin-bottom: 80px;
 }
-.blog-section .blog-line {
-    width: 90px;
-    height: 1px;
-    background-color: #51adcd;
-    margin-bottom: 50px;
-}
+.blog-section .blog-title {
+    position: relative;
+    padding-bottom: 15px;
+  }
+  
+
+
+
+
 
 .blog-section .homepage-blog-img img {
     transition: all 0.3s ease;
@@ -418,15 +455,12 @@ body {
     color: #51adcd;
 }
 
-.blog-section .homepage-blog-content hr {
-    width: 50px;
-    background-color: #51adcd;
-    margin-bottom: 15px;
-}
+
 
 .blog-section .homepage-blog-content .blog-short {
     color: #83868c;
     font-size: 16px;
+
 }
 
 .blog-date {
@@ -751,6 +785,128 @@ body {
   
     border-bottom: 1px solid #ddd;
     cursor: pointer;
+}
+
+.info-footer .newsletter-email {
+    width: 250px;
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.info-footer .newsletter-email form {
+    position: relative;
+    display: flex;
+}
+
+.info-footer .newsletter-email .form-email {
+    width: 100%;
+    position: relative;
+    margin: 0;
+}
+
+.info-footer .newsletter-email .form-email .form-control {
+    padding: 0 25px;
+    line-height: 40px;
+    height: 40px;
+    width: 100%;
+    border-radius: unset;
+    background: white;
+    border: none;
+    outline: none !important;
+    margin-bottom: 30px;
+}
+
+
+.info-footer .newsletter-email .form-email .form-control:focus {
+
+    box-shadow: none;
+}
+
+
+.info-footer .newsletter-email .footer-btn {
+    width: 45px;
+    height: 40px;
+    background: black;
+    color: white;
+    border: none;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.info-footer .newsletter-email .footer-btn:hover {
+    background: #51adcd;
+}
+
+.info-footer .social-footer .social  {
+    color: black;
+    letter-spacing: 10px;
+    border: none;
+    text-decoration: none;
+}
+.info-footer .social-footer .social :hover {
+    border: none;
+    color: #51adcd;
+    outline: none;
+}
+
+.footer-info .header-detail-footer h4{
+    color: #000000;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.footer-info .header-detail-footer hr {
+    background: #000;
+    margin: 0; 
+    border: none; 
+    border-top: 1px solid #000; 
+    width: 30px; 
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.footer-info .footer-detail-content li a, li {
+    list-style: none;
+    color: black;
+    transition: all .3s ease;
+    text-decoration: none;
+    font-weight: 400;
+    line-height: 32px;
+    font-size: 14px;
+}
+
+.footer-info .footer-detail-content li a:hover {
+    color: #51adcd;
+}
+
+.top-footer .footer-border {
+    padding: 50px 0 40px 30px;
+    border-left: 1px solid #dddddd6e;
+}
+
+
+.top-footer {
+    background-color: #f4f4f4;
+    border-top: 1px solid #ddd;
+}
+
+.info-footer {
+    padding: 50px 0 40px;
+}
+
+.info-footer .logo-name h1, .info-footer .logo-name a{
+    letter-spacing: 10px;
+    font-weight: 800;
+    color: #000;
+    text-decoration: none;
+}
+
+
+.copyright {
+    padding: 26px 0;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ddd;
 }
 
 @media screen and (max-width: 1440px) {
