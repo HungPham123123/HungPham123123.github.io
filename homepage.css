@@ -801,7 +801,26 @@ body {
     .product-row {
         margin-left: 60px;
     }
-
+    .product-box .product-icon {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+       top: 220px;
+        left: 5px;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(40%);
+        transition: opacity 0.5s, transform 0.5s;
+    }
+    
+    .product-box:hover .product-icon {
+        visibility: hidden;
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media screen and (max-width: 793px) {
