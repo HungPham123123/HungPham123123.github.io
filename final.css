@@ -110,7 +110,7 @@
 /* Banner */
 #banner {
     min-height: 110vh;
-    background-image: url("image/banner.jpg");
+    background-image: url("image/banner.webp");
     background-position: center;
     background-size: cover;
 }
