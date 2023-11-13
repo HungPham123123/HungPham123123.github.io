@@ -2,14 +2,13 @@ body {
     font-family: 'Jost', sans-serif;
 }
 
-.container {
+.container-homepage {
     max-width: 1440px;
 }
 
 /* motivation */
 
 .motivation-product .motivation-line {
-
     background-color: #51adcd;
     margin-bottom: 50px;
     border: none;
@@ -910,7 +909,7 @@ body {
 }
 
 @media screen and (max-width: 1440px) {
-    .container {
+    .container-homepage {
         max-width: 1200px;
     }
     .run-button a {
@@ -930,7 +929,7 @@ body {
 }
 
 @media screen and (max-width: 1086px) {
-    .container {
+    .container-homepage {
         max-width: 900px;
     }
     .product-row {
