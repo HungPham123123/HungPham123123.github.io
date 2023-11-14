@@ -2,8 +2,8 @@ $('.image-slider').slick({
   dots: true,
   infinite: true,
   speed: 300,
-  slidesToShow: 4,
-  slidesToScroll: 4,
+  slidesToShow: 3,
+  slidesToScroll: 3,
   autoplay: true,
   autoplaySpeed: 3000,
   arrows: false,
@@ -18,7 +18,7 @@ $('.image-slider').slick({
       }
     },
     {
-      breakpoint: 1144,
+      breakpoint: 1230,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2

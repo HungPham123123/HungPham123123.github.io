@@ -906,3 +906,13 @@ body {
     background-color: #f4f4f4;
     border-top: 1px solid #ddd;
 }
+
+
+@media (max-width: 576px) {
+
+    .product-box:hover .product-icon {
+        visibility: hidden;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
