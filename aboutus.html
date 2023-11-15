@@ -20,6 +20,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!--Script-->
+<link
+rel="stylesheet"
+type="text/css"
+href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+/>
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -168,14 +174,12 @@
           <h1>Meet Our Teams</h1>
           <p>Shoe companies have developed signature foams that not only enhance softness but also put a little more spring into your step.</p>
       </div>
-      <div class="row">
-          <div class="col-md-12">
-            <div id="team-slider-container" class="team-slider-container hidden">
-              <div id="team-slider" class="team-slide hidden">
+      <div class="row image-slider">
+
                 <div class="team-box ">
                   <div class="team-img">
                       <a href="">
-                          <img src="picture/about2-1.webp" alt="">
+                          <img src="picture/about2-1.webp" alt="" style="width: 100%;">
                       </a>
                   </div>
                   <div class="team-text">
@@ -188,7 +192,7 @@
               <div class="team-box ">
                   <div class="team-img">
                       <a href="">
-                          <img src="picture/about2-2.webp" alt="">
+                          <img src="picture/about2-2.webp" alt="" style="width: 100%;" >
                       </a>
                   </div>
                   <div class="team-text">
@@ -200,7 +204,7 @@
               <div class="team-box ">
                 <div class="team-img">
                     <a href="">
-                        <img src="picture/about2-3.webp" alt="">
+                        <img src="picture/about2-3.webp" alt="" style="width: 100%;" >
                     </a>
                 </div>
                 <div class="team-text">
@@ -212,20 +216,13 @@
             <div class="team-box ">
               <div class="team-img">
                   <a href="">
-                      <img src="picture/about2-4.webp" alt="">
+                      <img src="picture/about2-4.webp" alt="" style="width: 100%;" >
                   </a>
               </div>
               <div class="team-text">
                   <h2 class="text-center">Joe Mama</h2>
                   <p class="text-center">Developer</p>
               </div>
-          </div>
-            
-            
-
-          
-              </div>
-            </div>
           </div>
       </div>
   </div>
@@ -455,9 +452,18 @@
   </footer>
 
 
-
-
-
+  <script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-1.11.0.min.js"
+></script>
+<script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+></script>
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+></script>
   <script src="aboutus.js"></script>
   <script src="final.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
