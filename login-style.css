@@ -47,7 +47,7 @@ body{
 }
 
 .container button{
-    background-color: #512da8;
+    background-color: #51adcd;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -58,7 +58,15 @@ body{
     text-transform: uppercase;
     margin-top: 10px;
     cursor: pointer;
+    transition: all ease 0.3s
 }
+
+.container button:hover {
+    transform: scale(1.04);
+    color: #000;
+}
+
+
 
 .container button.hidden{
     background-color: transparent;
@@ -84,6 +92,25 @@ body{
     border-radius: 8px;
     width: 100%;
     outline: none;
+}
+
+.back-button {
+    font-size: 200px;
+    color: black;
+    position: absolute;
+    left: 95%;
+    top: 0%;
+    z-index: 1001;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.close-box span {
+    font-size: 25px;
+}
+
+.close-box .back-button span:hover {
+    color: #51adcd;
 }
 
 .form-container{
@@ -163,7 +190,7 @@ body{
 .toggle{
     background-color: #512da8;
     height: 100%;
-    background: linear-gradient(to right, #5c6bc0, #512da8);
+    background: linear-gradient(to right, #5c6bc0, #51adcd);
     color: #fff;
     position: relative;
     left: -100%;
