@@ -2,6 +2,10 @@ body {
     font-family: 'Jost', sans-serif;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 .container-homepage {
     max-width: 1440px;
 }
@@ -112,6 +116,8 @@ body {
     margin-bottom: 50px;
     margin-top: 20px;
 }
+
+
 
 /* product */
 
@@ -276,7 +282,8 @@ body {
 
 .brand-logo {
     background: #f4f4f4;
-    padding: 50px 0px
+    padding: 50px 0px;
+    
 }
 
 .brand-logo img {
@@ -289,6 +296,16 @@ body {
 }
 .brand-logo img:hover {
     opacity: 0.5;
+}
+
+.brand-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.brand-box .logo {
+    margin-right: 20px;
 }
 
 
@@ -306,6 +323,13 @@ body {
 .banner-items:hover img {
     transform: scale(1.04);
     transition: all 0.8s linear;
+}
+
+
+
+
+.banner-box {
+    position: relative;
 }
 
 .banner-items:hover .banner-content {
@@ -931,8 +955,7 @@ html::-webkit-scrollbar-thumb
 }
 
 
-@media (max-width: 576px) {
-
+@media (max-width: 1024px) {
     .product-box:hover .product-icon {
         visibility: hidden;
         opacity: 1;
