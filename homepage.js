@@ -28,7 +28,10 @@ $('.image-slider').slick({
     breakpoint: 800,
     settings: {
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      dots: false,
+      autoplay: true,
+      autoplaySpeed: 2000
     }
   }
   ]

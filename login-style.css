@@ -98,20 +98,17 @@ body{
     font-size: 200px;
     color: black;
     position: absolute;
-    left: 95%;
-    top: 0%;
+    left: 92%;
+    top: -2%;
     z-index: 1001;
     cursor: pointer;
     transition: all ease 0.3s;
 }
 
 .close-box span {
-    font-size: 25px;
+    font-size: 50px;
 }
 
-.close-box .back-button span:hover {
-    color: #51adcd;
-}
 
 .form-container{
     position: absolute;

@@ -134,9 +134,10 @@ html, body {
     flex-direction: column;
     width: 300px;
     padding: 15px;
-   margin: 0px 26px;
+   margin: 0 auto;
    position: relative;
    overflow: hidden;
+   margin-bottom: 50px;
 }
 
 .p-img-container {
@@ -934,25 +935,8 @@ html, body {
     background-color: #f4f4f4;
     border-top: 1px solid #ddd;
 }
-html::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #F5F5F5;
-}
 
-html::-webkit-scrollbar
-{
-	width: 5px;
-	background-color: #F5F5F5;
-}
 
-html::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #83868c;
-}
 
 
 @media (max-width: 1024px) {
@@ -960,5 +944,24 @@ html::-webkit-scrollbar-thumb
         visibility: hidden;
         opacity: 1;
         transform: translateY(0);
+    }
+
+    .run-button a {
+        visibility: hidden;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .slick-dots {
+        transform: translate(-50%, 0);
+    }
+}
+
+@media screen and (max-width: 1200) {
+    .product-box {
+   
+       margin: 0 auto;
+ 
     }
 }
