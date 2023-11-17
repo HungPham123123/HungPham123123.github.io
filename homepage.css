@@ -179,18 +179,18 @@ html, body {
     justify-content: center;
     align-items: center;
     list-style: none;
-   top: 65%;
+    top: 65%;
     left: 5%;
     visibility: hidden;
     opacity: 0;
-    transform: translateY(40%);
+    margin: 0 auto;
     transition: opacity 0.5s, transform 0.5s;
 }
 
 .product-box:hover .product-icon {
     visibility: visible;
     opacity: 1;
-    transform: translateY(0);
+    transform: translate(8%, 0%);
 }
 
 .product-icon li {
