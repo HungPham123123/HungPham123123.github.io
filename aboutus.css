@@ -2,11 +2,14 @@ body {
 font-family: 'Jost', sans-serif;
 }
 
-#aboutus-start {
+.aboutus-start {
     background-image: url(picture/mick-haupt-joHasPcobwg-unsplash.jpg);
-    height: 400px;
     background-size: cover;
     background-position: center;
+    text-align: center;
+    height: 400px;
+    color: aliceblue;
+    font-size: 20px;
     margin-top: 80px;
 }
 
@@ -107,27 +110,18 @@ font-family: 'Jost', sans-serif;
     overflow: hidden;
     position: relative;
     align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 #aboutus-team .team-title p {
     margin-bottom: 40px;
 }
 
-#aboutus-team .team-slide {
-    display: flex;
-    white-space: nowrap;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding-bottom: 20px;
-    scroll-snap-type: x proximity;
-    -webkit-overflow-scrolling: touch;
-    transition: transform 0.5s ease-in-out;
-    margin-left: 30px;
-}
 
 #aboutus-team .team-box {
     flex: 0 0 auto;
-    margin-right: 70px;
+    margin-right: 20px;
     scroll-snap-align: start; 
 }
 .team-box {

@@ -9,11 +9,115 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="readMore.css">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="final.css">
 </head>
 <body>
-    <div class="container-fluid blog-wrap">
+    <header>
+        <nav class="navbar navbar-expand-md sticky-top bg-light navbar-light m-0 pt-3 pb-3" id="myNavbar">
+            <a class="navbar-brand col-3 text-center p-0 m-0" href="index.html">WALKZ</a>
+            <button class="navbar-toggler col-sm-2" type="button" data-toggle="collapse" data-target="#myLinkGroup" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse col-9 p-0 m-0" id="myLinkGroup">
+                <ul class="navbar-nav col-8 justify-content-between p-0 m-0">
+                    <li class="nav-item m-auto">
+                        <a class="nav-link text-center" href="index.html">SHOP</a>
+                    </li>
+                    <li class="nav-item m-auto">
+                        <a class="nav-link text-center" href="blog.html">BLOG</a>
+                    </li>
+                    <li class="nav-item m-auto">
+                        <a class="nav-link text-center" href="aboutus.html">ABOUT US</a>
+                    </li>
+                    <li class="nav-item m-auto">
+                        <a class="nav-link text-center" href="#">CONTACT US</a>
+                    </li>
+                </ul>
+                <div class="row col-4 justify-content-center" id="myBtnGroup">
+                    <div class="col" id="searchBtn">
+                        <!-- Button to Open the Search Modal -->
+                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#mySearchModal">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <div class="col" id="userBtn">
+                        <a href="login.html" style="color: black;">
+                        <button type="button" class="btn btn-light">
+                            <i class="fa-regular fa-user"></i>
+                        </button>
+                    </a>
+                    </div>
+                    <div class="col" id="cartBtn">
+                        <!-- Button to Open the Cart Modal -->
+                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myCartModal">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- The Search Modal -->
+        <div class="modal fade" id="mySearchModal">
+            <div class="modal-dialog modal-sm modal-dialog-centered">
+                <div class="modal-content"> 
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Search our products:</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+      
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form action="#" class="form-inline">
+                            <div class="form-group">
+                                <input type="text" name="search" id="search" class="">
+                            </div>
+                            <button type="submit" class="btn btn-success btn-sm">Search</button>
+                        </form>
+                    </div>
+      
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+                    </div>
+      
+                </div>
+            </div>
+        </div>
+        <!-- The Cart Modal -->
+        <div class="modal fade" id="myCartModal">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content"> 
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Your shopping cart:</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+      
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="" id="displayProducts">
+    
+                        </div>
+                        <div class="" id="totalPrice">
+                            <h3>Total:</h3>
+                        </div>
+                    </div>
+      
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+                    </div>
+      
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid blog-wrap" style="margin-top: 90px;">
         <div class="link">
-            <a href="#">Home</a>
+            <a href="index.html">Home</a>
             &GT;
             <a href="blog.html">News</a>
             &GT;
@@ -138,5 +242,165 @@
             </div>
         </div>
     </div>
+    <footer>
+        <div class="top-footer">
+            <div class="container container-homepage">
+                <div class="row">
+                    <div class="col-md-3 footer-padding">
+                        <div class="info-footer">
+                            <div class="logo-name">
+                                <a href="">
+                                    <h1>WALKZ</h1>
+                                </a>
+                            </div>
+                            <p class="info-subs">
+                                Subscribe our newsletter and get <br>discount 30% off
+                            </p>
+                            <div class="newsletter-email">
+                                <form action method="post">
+                                    <div class="form-email">
+                                        <input type="email" name="EMAIL" class="form-control" placeholder="Your email address..." required>
+                                    </div>
+                                    <button class="footer-btn" type="submit">
+                                        <i class="fa-solid fa-paper-plane"></i>
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="social-footer">
+                                <div>
+                                    <a class="social" href="">
+                                        <i class="fa-brands fa-square-x-twitter"></i>
+                                    </a>
+                                    <a class="social" href="">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a class="social" href="">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </a>
+                                    <a class="social" href="">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 footer-border">
+                        <div class="footer-info">
+                            <div class="header-detail-footer">
+                                <h4>HOW CAN WE HELP YOU?</h4>
+                                <hr>
+                            </div>
+                            <div class="footer-detail-content">
+                               <li>
+                                <a href="">Printing and embroidery</a>
+                            </li>
+                               <li>
+                                <a href="">Frequently Asked Questions</a>
+                            </li>
+                               <li>
+                                <a href="">Delivery time and costs</a>
+                            </li>
+                               <li>
+                                <a href="">Privacy Policy</a>
+                            </li>
+                               <li>
+                                <a href="">Warranty</a>
+                            </li>
+                               <li>
+                                <a href="">Returns</a>
+                            </li>
+                               <li>
+                                <a href="">Cookies</a>
+                            </li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 footer-border">
+                        <div class="footer-info">
+                            <div class="header-detail-footer">
+                                <h4>CHOOSE YOUR SPORT</h4>
+                                <hr>
+                            </div>
+                            <div class="footer-detail-content">
+                               <li>
+                                <a href="Running.html">Running</a>
+                            </li>
+                               <li>
+                                <a href="basketball.html">Basketball</a>
+                            </li>
+                               <li>
+                                <a href="">Handball</a>
+                            </li>
+                               <li>
+                                <a href="">Field Hockey</a>
+                            </li>
+                               <li>
+                                <a href="volleyball.html">Volleyball</a>
+                            </li>
+                               <li>
+                                <a href="">Squash</a>
+                            </li>
+                               <li>
+                                <a href="tennisShoes.html">Tennis</a>
+                            </li>
+                            <li>
+                                <a href="">Korfball</a>
+                            </li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 footer-border">
+                        <div class="footer-info">
+                            <div class="header-detail-footer">
+                                <h4>CUSTOMER SERVICES</h4>
+                                <hr>
+                            </div>
+                            <div class="footer-detail-content">
+                               <li>
+                                <a href="">Contact Us</a>
+                            </li>
+                               <li>
+                                <a href="">Corporate Sale/Wholesalers</a>
+                            </li>
+                               <li>
+                                <a href="">FAQ</a>
+                            </li>
+                               <li>
+                                <a href="">Click&Collect</a>
+                            </li>
+                               <li>
+                                <a href="">Size Guide</a>
+                            </li>
+                               <li>
+                                <a href="">Shipping</a>
+                            </li>
+                               <li>
+                                <a href="">Shipping</a>
+                            </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <div class="containe container-homepage">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-md-left">
+                        <div class="copyright-text">
+                            <p style="margin-bottom: 0;">© Copyright | 2023 All Rights Reserved</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-md-right">
+                        <img src="homepagepicture/pay_copyright.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="final.js"></script>
 </body>
 </html>
