@@ -133,6 +133,8 @@ html, body {
     position: relative;
 }
 
+
+
  .product-box {
     display: flex;
     flex-direction: column;
@@ -194,7 +196,7 @@ html, body {
 .product-box:hover .product-icon {
     visibility: visible;
     opacity: 1;
-    transform: translate(8%, 0%);
+    transform: translate(2%, 0%);
 }
 
 .product-icon li {
