@@ -133,7 +133,9 @@ html, body {
     position: relative;
 }
 
-
+.img-product {
+    position: relative;
+}
 
  .product-box {
     display: flex;
@@ -144,6 +146,11 @@ html, body {
    position: relative;
    overflow: hidden;
    margin-bottom: 50px;
+}
+
+.label-sale,
+.product-icon {
+    position: absolute;
 }
 
 .p-img-container {
@@ -185,8 +192,8 @@ html, body {
     justify-content: center;
     align-items: center;
     list-style: none;
-    top: 65%;
-    left: 5%;
+    top: 80%;
+    left: 7%;
     visibility: hidden;
     opacity: 0;
     margin: 0 auto;
@@ -978,10 +985,7 @@ html, body {
         visibility: hidden;
     }
 
-    .banner-content h3 {
-        font-size: 25px;
-        font-weight: 600;
-    }
+
 
     .banner-items::after {
          background-color: rgba(255, 255, 255, .85);
@@ -996,23 +1000,45 @@ html, body {
     }
 }
 
+@media screen and (max-width: 1166px) {
+    .banner-content h3 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
 
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 767px) {
     .slick-dots {
         transform: translate(-50%, 0);
     }
     .banner-content h3 {
-        font-size: 15px;
+        font-size: 60px;
         font-weight: 600;
     }
 
     
 }
 
-
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 555px) {
     .banner-content h3 {
-        font-size: 40px;
+        font-size: 43px;
         font-weight: 600;
     }
 }
+
+
+@media screen and (max-width: 430px) {
+    .banner-content h3 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 335px) {
+    .banner-content h3 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
