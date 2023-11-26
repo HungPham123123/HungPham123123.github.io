@@ -1,0 +1,43 @@
+
+.contact-img{
+    background-image: url(picture/contact-shoes.avif);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 400px;
+    color: aliceblue;
+    font-size: 20px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.contact-container {
+    width: 1300px;
+}
+
+.contact-us-header h2 {
+    font-family: "Barlow", sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 35px;
+    margin-bottom: 20px;
+}
+
+.contact-detail p {
+    color: #ADB0BC;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.contact-info .customer-support i{
+ display: flex;
+}
+
+.contact-info .customer-support i p{
+    font-family: "Barlow", sans-serif;
+    display: flex;
+   padding-left: 10px;
+   font-size: 14px;
+   font-weight: 700;
+   }

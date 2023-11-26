@@ -930,7 +930,7 @@ html, body {
     margin-top: 20px;
 }
 
-.footer-info .footer-detail-content li a, li {
+.footer-info .footer-detail-content li a,.footer-info .footer-detail-content li {
     list-style: none;
     color: black;
     transition: all .3s ease;
