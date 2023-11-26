@@ -156,7 +156,7 @@
 
 
     <div class="contact-page">
-        <div class="container contact-container">
+        <div class="container contact-container" style="margin-bottom: 100px;">
             <div class="row">
                 <div class="col-md-6">
                     <div class="contact-us-header">
@@ -169,22 +169,67 @@
                         <div class="col-md-6">
                             <div class="customer-support">
                                 <i class="fa-solid fa-user"><p>Customer Support</p></i>
-                                <p>support  </p>
+                                <div class="contact-list">
+                                <a href="mailto:support@gmail.com">support@gmail.com</a>
+                                <a href="tel:+84 123 456 789">+84 123 456 789</a>
+                                <p id="openLiveChatBtn">Live Chat</p>
                             </div>
-                            
+                            </div>
                         </div>
                         <div class="col-md-6">
-                            
+                            <div class="store-location">
+                                <div class="store-header">
+                                    <i class="fa-solid fa-location-dot"><p>Store</p></i>
+                                </div>
+                                <div class="store-list">
+                                    <a href="https://www.google.com/maps?q=21.028722,105.783361">Số 8 Tôn Thất Thuyết, Hà Nội</a>
+                                    <a href="https://www.google.com/maps?q=10.786407244885046,106.66628462699894">590 Cách Mạng Tháng Tám, TP. HCM</a>
+                                    <a href="https://www.google.com/maps?q=10.790970924064588,106.68241486748099"> 391A, Nam Kỳ Khởi Nghĩa, TP. HCM</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-6">
-
+                    <div class="contact-email">
+                        <form id="myForm" action="https://formspree.io/f/mbjvvgqp" method="post" onsubmit="return validateForm()">
+                            <div class="form-row" style="margin-bottom: 20px;">
+                                <div class="col-md-6">
+                                    <div class="contact-email-style">
+                                        <input type="text" id="name" placeholder="Name*" >
+                                        <div class="error-message" id="nameError"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <div class="contact-email-style">
+                                        <input type="email" id="email" placeholder="Email*" >
+                                        <div class="error-message" id="emailError"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <div>
+                                        <div class="contact-email-style">
+                                            <textarea id="message" name="" cols="40" rows="10" style="max-height: 148px; height: 148px;" placeholder="Enter your message" ></textarea>
+                                            <div class="error-message" id="messageError"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="submit-btn">Submit now</button>
+                            <div class="error-messages" id="generalError"></div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="google-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.102886142648!2d105.78075357603396!3d21.028568887783628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4cdef48301%3A0x9e3f57b9adf0d78!2zOCBUw7RuIFRo4bqldCBUaHV54bq_dCwgTeG7uSDEkMOsbmgsIFThu6sgTGnDqm0sIEjDoCBO4buZaSwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1701014140429!5m2!1sen!2s" width="100%" height="600" style="border:0; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
 
     <footer>
         <div class="top-footer">
@@ -344,11 +389,12 @@
         </div>
     </footer>
 
-
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143691519.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+    <script src="contact.js"></script>
+</body>
 </html>
