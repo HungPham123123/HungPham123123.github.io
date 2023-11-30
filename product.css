@@ -217,10 +217,3 @@
     outline: none;
 }
 
-@media screen and (max-width: 1474px) {
-    #sidebar {
-        height: 1325px;
-        overflow-y: scroll;
-    }
-}
-
