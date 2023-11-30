@@ -131,6 +131,8 @@ html, body {
 
 .product {
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .img-product {
@@ -138,14 +140,15 @@ html, body {
 }
 
  .product-box {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    width: 300px;
-    padding: 15px;
-   margin: 0 auto;
-   position: relative;
-   overflow: hidden;
-   margin-bottom: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    width: calc(33.33% - 20px);
+    margin: 0 0 20px 0;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .label-sale,
@@ -175,25 +178,27 @@ html, body {
 
 .label-sale {
     position: absolute;
-    top: 0px;
-    right: -45px;
+    top: 5px;
+    right: -35px;
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 1px;
     padding: 5px 12px;
     transform: rotate(45deg);
     width: 110px;
+    text-align: center;
 }
 
-.product-box .product-icon {
+.product-icon {
     position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     list-style: none;
-    top: 80%;
-    left: 7%;
+    bottom: 0; /* Adjusted from top: 80% to bottom: 0 */
+    left: 10%; /* Adjusted from left: 0% to left: 50% */
+    transform: translateX(-50%); /* Center horizontally */
     visibility: hidden;
     opacity: 0;
     margin: 0 auto;
@@ -273,6 +278,12 @@ html, body {
     font-size: 16px;
     font-weight: inherit;
     text-decoration: none;
+    text-align: center;
+    justify-content: center;
+}
+
+.product-title {
+    text-align: center;
 }
 
 .product-title a:hover {
@@ -288,6 +299,10 @@ html, body {
     color: #51adcd;
     font-weight: 700;
     font-size: 15px;
+}
+
+.product-price {
+    text-align: center;
 }
 
 
@@ -1042,3 +1057,15 @@ html, body {
     }
 }
 
+@media (max-width: 768px) {
+    .product-box {
+        width: calc(50% - 20px); /* Two products per row on smaller screens */
+    }
+}
+
+/* Add media query for even smaller screens if necessary */
+@media (max-width: 480px) {
+    .product-box {
+        width: 100%; /* Single product per row on very small screens */
+    }
+}

@@ -1,15 +1,5 @@
 
-.contact-img{
-    background-image: url(picture/contact-shoes.avif);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    height: 400px;
-    color: aliceblue;
-    font-size: 20px;
-    margin-top: 80px;
-    margin-bottom: 100px;
-}
+
 
 .contact-container {
     max-width: 1300px;
