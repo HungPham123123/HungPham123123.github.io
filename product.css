@@ -1,9 +1,10 @@
 #product-header .container-product {
-    max-width: 1870px;
+    max-width: 1393px;
 }
 
 #product-main .product-main-container  {
     max-width: 1950px;
+    min-height: 1778px;
 }
 
 
@@ -51,6 +52,8 @@
     top: 0;
     left: 0;
     z-index: 1; 
+    min-height: 1778px;
+    max-height: 1778px;
 }
 
 .sidebar-content {
