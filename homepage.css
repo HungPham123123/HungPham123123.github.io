@@ -196,9 +196,9 @@ html, body {
     justify-content: center;
     align-items: center;
     list-style: none;
-    bottom: 0; /* Adjusted from top: 80% to bottom: 0 */
-    left: 10%; /* Adjusted from left: 0% to left: 50% */
-    transform: translateX(-50%); /* Center horizontally */
+    bottom: 0; 
+    left: 8%; 
+    transform: translatey(50%);
     visibility: hidden;
     opacity: 0;
     margin: 0 auto;
