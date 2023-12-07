@@ -66,11 +66,24 @@ function toggleAthletesList() {
 }
 
 const menuBar = document.querySelector('.filter-content .hide-show');
-const sidebar = document.getElementById('sidebar');
+const sidebarContainer = document.getElementById('sidebar-container');
+const mainContent = document.getElementById('main-content');
 
-menuBar.addEventListener('click', function () {
-    sidebar.classList.toggle('hide');
-})
+function toggleColumns() {
+    const isUnder1024px = window.matchMedia('(max-width: 1024px)').matches;
+
+    sidebarContainer.classList.toggle('col-md-2', !isUnder1024px);
+    sidebarContainer.classList.toggle('col-md-0', isUnder1024px);
+
+    mainContent.classList.toggle('col-md-10', !isUnder1024px);
+    mainContent.classList.toggle('col-md-12', isUnder1024px);
+}
+
+// Event listener for window resize
+window.addEventListener('resize', toggleColumns);
+
+// Initial check on page load
+toggleColumns();
 
 
 
@@ -80,9 +93,9 @@ function toggleColumns() {
     var mainContent = document.getElementById('main-content');
 
     sidebarContainer.classList.toggle('col-md-0');
-    sidebarContainer.classList.toggle('col-md-2');
+    sidebarContainer.classList.toggle('col-md-3');
 
-    mainContent.classList.toggle('col-md-10');
+    mainContent.classList.toggle('col-md-9');
     mainContent.classList.toggle('col-md-12');
 }
 

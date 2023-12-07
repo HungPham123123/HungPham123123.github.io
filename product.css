@@ -1,5 +1,5 @@
 #product-header .container-product {
-    max-width: 1393px;
+    max-width: 1853px;
 }
 
 #product-main .product-main-container  {
@@ -220,3 +220,20 @@
     outline: none;
 }
 
+
+@media screen and (max-width: 1024px) {
+    .col-md-2 {
+        display: none;
+    }
+
+    .col-md-3 {
+        width: 0;
+        overflow: hidden;
+    }
+
+    .col-md-10,
+    .col-md-12 {
+        width: 100%;
+    }
+
+}
