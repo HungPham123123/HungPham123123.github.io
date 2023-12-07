@@ -836,7 +836,6 @@ html, body {
     right: -2px;
     top: 7px;
     width: 42px;
-  
     border-bottom: 1px solid #ddd;
     cursor: pointer;
 }
@@ -987,6 +986,8 @@ html, body {
     background-color: #f4f4f4;
     border-top: 1px solid #ddd;
 }
+
+
 
 
 @media screen and (max-width: 1024px) {

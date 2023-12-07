@@ -77,3 +77,5 @@ qtyPlus.addEventListener('click', function () {
     quantityInput.value = currentValue + 1;
 });
 });
+
+
