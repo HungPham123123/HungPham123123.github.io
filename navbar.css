@@ -5,15 +5,15 @@ html, body {
 
 header {
     position: sticky;
-    top: 0; /* Set the top value to 0 so that the header becomes sticky at the top of the page */
-    background-color: white; /* Add a background color to make it stand out */
+    top: 0;
+    background-color: white;
     z-index: 100;
     transition: height 0.3s ease, padding 0.3s ease;
 }
 
 header.shrink {
     height: 50px;
-    padding: 10px 0; /* Adjust padding when header shrinks */
+    padding: 10px 0;
 }
 
 .container-header {
@@ -107,7 +107,7 @@ header.shrink {
     right: 0;
     height: 100%;
     width: 390px;
-    background-color: #fff;
+    background-color: #F7F7F7;
     z-index: 100000;
     transform: translateX(110%);
     transition: transform 0.3s ease;
