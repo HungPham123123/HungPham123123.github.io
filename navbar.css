@@ -160,6 +160,7 @@ header.shrink {
     border: 1px solid #ecebeb;
     border-top: transparent;
     border-right: transparent;
+    cursor: none;
 }
 
 .prod {
