@@ -54,6 +54,7 @@ function togglePopup() {
 document.getElementById("popup-1").classList.toggle("active")
 }
 
+
 document.addEventListener('DOMContentLoaded', function () {
 const quantityInput = document.getElementById('quantityInput');
 const qtyMinus = document.querySelector('.qty-minus');
