@@ -491,6 +491,11 @@ header {
     color: #000;
 }
 
+.product-title-search a:hover {
+    text-decoration: none;
+    color: #51adcd;
+}
+
 .product-title-search .highlight {
     background: #51adcd;
     color: #fff;
