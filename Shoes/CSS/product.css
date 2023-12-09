@@ -1,0 +1,238 @@
+#product-header .container-product {
+    max-width: 1853px;
+}
+
+#product-main .product-main-container  {
+    max-width: 1950px;
+    min-height: 1778px;
+}
+
+
+
+.col-md-0 {
+    width: 0 !important;
+}
+
+.expand-content.col-md-12 {
+    width: 100%;
+}
+
+#product-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#sidebar-container {
+    position: relative;
+    transition: width 0.7s;
+}
+
+.contact-img{
+    background-image: url(Images/Product-Shoes.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 400px;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.product-column {
+    transition: width 0.7s;
+}
+
+#sidebar {
+    position: absolute;
+    max-width: 400px;
+    background: white;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+    min-height: 1778px;
+    max-height: 1778px;
+}
+
+.sidebar-content {
+    position: relative;
+}
+
+#sidebar.hide {
+    transform: translateX(-120%);
+}
+
+.clickable {
+    cursor: pointer;
+    height: 25px;
+    margin-bottom: 5px;
+}
+
+.filter-button{
+    width: 20px;
+    height: 20px;
+    vertical-align: top;
+    border: solid 1px #CACACB;
+    border-radius: 4px;
+    margin-right: 6px;
+    display: inline-block;
+    position: relative;
+    accent-color: black;
+    cursor: pointer;
+}
+
+.clickable label {
+    cursor: pointer;
+}
+
+
+.color-button {
+    width: 28%;
+    height: 100%;
+    min-height: 68px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.color-choose {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    border-radius: 14px;
+    display: block;
+    display: inline-block;
+}
+
+.color-text {
+    font-size: 13px;
+}
+
+.color-button:hover .color-text {
+    border: none;
+    color: #707072;
+}
+
+.color-button:active,
+.color-button:focus {
+    outline: none;
+}
+
+.img-color-product {
+    position: absolute;
+    background: transparent;
+    margin-top: 7px;
+    color: #FFFFFF;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.color-button.clicked .img-color-product {
+    visibility: visible;
+    opacity: 1;
+}   
+
+.img-color-product-white {
+    position: absolute;
+    background: transparent;
+    margin-top: 7px;
+    color: #000000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.color-button.clicked .img-color-product-white {
+    visibility: visible;
+    opacity: 1;
+}
+
+#sort-option {
+    position: relative;
+    z-index: 3;
+    display: none;
+}
+
+#sort-option.active {
+    display: block;
+}
+
+#sort-by-name.selected {
+    color: #707072 !important;
+}
+
+
+.disabled {
+    cursor: not-allowed !important;
+    color: #ccc;
+}
+
+#sort-option .drop-down-sort {
+    border-radius: 0px 0px 20px 20px;
+    transform: translateY(0%);
+    visibility: visible;
+    padding-bottom: 15px;
+    padding-right: 28px;
+    padding-top: 24px;
+    transition: transform 300ms ease 0s;
+    background: rgb(255, 255, 255);
+    z-index: 3;
+    right: -10px;
+    pointer-events: auto;
+    position: absolute;
+    top: 100%;
+    overflow: hidden;
+    z-index: 3;
+}
+
+#sort-option .drop-down-sort .dropdown-option {
+    text-align: right;
+    padding: 0px 0px 0px 24px;
+    width: 100%;
+    white-space: nowrap;
+    display: block;
+    background: transparent;
+    color: #000000;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#sort-option .drop-down-sort .dropdown-option:hover {
+    color: #707072;
+}
+
+#sort-option .drop-down-sort .dropdown-option:focus {
+    outline: none;
+}
+
+#sort-by-name:focus {
+    outline: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .col-md-2 {
+        display: none;
+    }
+
+    .col-md-3 {
+        width: 0;
+        overflow: hidden;
+    }
+
+    .col-md-10,
+    .col-md-12 {
+        width: 100%;
+    }
+
+}
