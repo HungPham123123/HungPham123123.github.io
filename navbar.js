@@ -5,6 +5,7 @@ const backdrop = document.getElementById('backdrop')
 
 openBtn.addEventListener('click', openCart)
 closeBtn.addEventListener('click', closeCart)
+backdrop.addEventListener('click', closeCart)
 
 function openCart() {
     cart.classList.add('open')
@@ -23,3 +24,35 @@ function closeCart() {
         backdrop.style.display = 'none'
     }, 500)
 }
+
+
+const searchBtn = document.getElementById('search-icon')
+const search = document.getElementById('search-bar')
+const closeSearchBtn = document.getElementById('close-search')
+const openSearchBack = document.getElementById('back-of-search')
+const backdrop2 = document.getElementById('backdrop2')
+
+searchBtn.addEventListener('click', openSearch)
+closeSearchBtn.addEventListener('click', closeSearch)
+backdrop2.addEventListener('click', closeSearch)
+
+function openSearch() {
+    search.classList.add('opens')
+    openSearchBack.classList.add('opens-back')
+    backdrop2.style.display = 'block'
+
+    setTimeout(() => {
+        backdrop2.classList.add('shows')
+    }, 0)
+}
+
+function closeSearch() {
+    search.classList.remove('opens')
+    openSearchBack.classList.remove('opens-back')
+    backdrop2.classList.remove('shows')
+
+    setTimeout(() => {
+        backdrop2.style.display = 'none'
+    }, 500)
+}
+

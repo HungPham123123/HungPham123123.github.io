@@ -60,22 +60,19 @@ const qtyMinus = document.querySelector('.qty-minus');
 const qtyPlus = document.querySelector('.qty-plus');
 
 qtyMinus.addEventListener('click', function () {
-    // Get the current quantity value
+
     let currentValue = parseInt(quantityInput.value);
     
-    // Ensure the value doesn't go below 1
+
     if (currentValue > 1) {
         quantityInput.value = currentValue - 1;
     }
 });
 
 qtyPlus.addEventListener('click', function () {
-    // Get the current quantity value
     let currentValue = parseInt(quantityInput.value);
     
-    // Increment the value
     quantityInput.value = currentValue + 1;
 });
 });
-
 
