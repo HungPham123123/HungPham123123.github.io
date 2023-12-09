@@ -79,11 +79,11 @@ function toggleColumns() {
     var sidebarContainer = document.getElementById('sidebar-container');
     var mainContent = document.getElementById('main-content');
 
+    sidebarContainer.classList.toggle('col-md-3');
     sidebarContainer.classList.toggle('col-md-0');
-    sidebarContainer.classList.toggle('col-md-2');
 
-    mainContent.classList.toggle('col-md-10');
     mainContent.classList.toggle('col-md-12');
+    mainContent.classList.toggle('col-md-9');
 }
 
 
