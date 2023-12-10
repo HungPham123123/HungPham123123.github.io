@@ -77,17 +77,11 @@ qtyPlus.addEventListener('click', function () {
 });
 });
 
-$(document).ready(function(){
-  $(window).scroll(function(){
-      if($(this).scrollTop() > 900){
-          $('#backtop').fadeIn();
-      } else {
-          $('#backtop').fadeOut();
-      }
-  });
-  $("#backtop").click(function(){
-      $('html, body').animate({
-          scrollTop: 0
-      }, 300); 
-  });
-});
+
+const backtotop = document.getElementById('backtop')
+
+backtotop.addEventListener('click', scrolltotop)
+
+function scrolltotop() {
+  window.scrollTo(0, 0)
+}
