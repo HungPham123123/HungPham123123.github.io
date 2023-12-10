@@ -995,6 +995,32 @@ html, body {
 }
 
 
+#backtop {
+    width: 52px;
+    height: 52px;
+    background-color: none;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    cursor: pointer;
+    background: black;
+  }
+  #backtop:hover {
+    background-color: #fff;
+    transition: 0.2s ease-in-out;
+  }
+  #backtop i {
+    color: #fff;
+  } 
+  #backtop:hover i {
+    color: #000;
+  }
+
 
 
 @media screen and (max-width: 1024px) {
