@@ -76,12 +76,3 @@ qtyPlus.addEventListener('click', function () {
     quantityInput.value = currentValue + 1;
 });
 });
-
-
-const backtotop = document.getElementById('backtop')
-
-backtotop.addEventListener('click', scrolltotop)
-
-function scrolltotop() {
-  window.scrollTo(0, 0)
-}
