@@ -25,7 +25,6 @@
     max-width: 200px;
     height: 200px;
     border-radius: 5px;
-    border: 2px solid #D9D9D9;
     margin-right: 39px;
     background: #FFF;
     transition: all ease 0.3s;
@@ -101,4 +100,9 @@
 
 .showPayment {
     display: block;
+}
+
+.choose-box button.selectedPayment {
+    border: 2px solid #000;
+    opacity: 1;
 }

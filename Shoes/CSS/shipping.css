@@ -106,11 +106,9 @@
 
 
 .choose-container button.selected {
-    /* Add your styles for the selected state */
     border: 2px solid #000;
 }
 
-/* Style for the disabled button */
 .ship-method button.disabled {
     border: 2px solid #000;
     

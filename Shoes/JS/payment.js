@@ -14,6 +14,7 @@ function cardOne() {
     card.classList.add('showPayment')
     paypal.classList.remove('showPayment')
     momo.classList.remove('showPayment')
+
 }
 
 function paypalTwo() {
@@ -27,3 +28,27 @@ function momoThree() {
     paypal.classList.remove('showPayment')
     momo.classList.add('showPayment')
 }
+
+
+function selectMethod(selectedId) {
+    var buttons = document.querySelectorAll('.choose-box button');
+    buttons.forEach(function(button) {
+        button.classList.remove('selectedPayment');
+    });
+
+    var selectedButton = document.getElementById(selectedId);
+    selectedButton.classList.add('selectedPayment');
+
+}
+
+document.getElementById('card-1').addEventListener('click', function() {
+    selectMethod('card-1');
+});
+
+document.getElementById('paypal-2').addEventListener('click', function() {
+    selectMethod('paypal-2');
+});
+
+document.getElementById('momo-3').addEventListener('click', function() {
+    selectMethod('momo-3');
+});
