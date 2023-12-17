@@ -78,16 +78,17 @@ menuBar.addEventListener('click', function () {
 function toggleColumns() {
     var sidebarContainer = document.getElementById('sidebar-container');
     var mainContent = document.getElementById('main-content');
+    var sidebarContent = document.getElementById('sidebar')
 
     sidebarContainer.classList.toggle('col-md-3');
     sidebarContainer.classList.toggle('col-md-0');
 
     mainContent.classList.toggle('col-md-12');
     mainContent.classList.toggle('col-md-9');
+
+    sidebarContent.classList.toggle('sidebar');
+    sidebarContent.classList.toggle('showsidebar');
 }
-
-
-
 
 function toggleSortOption() {
     var sortOption = document.getElementById('sort-option');

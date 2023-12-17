@@ -43,7 +43,7 @@
     transition: width 0.7s;
 }
 
-#sidebar {
+#sidebar{
     position: absolute;
     max-width: 400px;
     background: white;
@@ -53,14 +53,17 @@
     z-index: 1; 
     min-height: 1778px;
     max-height: 1778px;
+    display: none;
 }
+
+
 
 .sidebar-content {
     position: relative;
 }
 
 #sidebar.hide {
-    transform: translateX(-120%);
+    display: block;
 }
 
 .clickable {
