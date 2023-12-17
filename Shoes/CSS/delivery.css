@@ -90,39 +90,22 @@
 .name-container {
     position: relative;
     margin-bottom: 20px;
+    display: inline-flex;
+    width: 100%;
 }
 
 .name-container input {
-    width: 48%;
+    width: 100%;
     border-radius: 3px;
     border: 1px solid #CCC;
     background: #FFF;
     height: 45px;
-}
-
-.name-container label{
-    position: absolute;
-    pointer-events: none;
-    top: 50%;
-    margin-left: 10px;
-    color: #0000008F;
-    transform: translateY(-50%);
-    transition: transform 0.3s ease-out;
+    padding-left: 10px;
 }
 
 
 .address {
     position: relative;
-}
-
-.address label, .phone-number label, .email label{
-    position: absolute;
-    pointer-events: none;
-    top: 50%;
-    margin-left: 10px;
-    color: #0000008F;
-    transform: translateY(-50%);
-    transition: transform 0.3s ease-out;
 }
 
 .address input, .phone-number input, .email input  {
@@ -131,6 +114,7 @@
     border: 1px solid #CCC;
     background: #FFF;
     height: 45px;
+    padding-left: 10px;
 }
 
 .apartment {
@@ -147,22 +131,13 @@
     display: none;
 }
 
-.apartment label {
-    position: absolute;
-    pointer-events: none;
-    top: 50%;
-    margin-left: 10px;
-    color: #0000008F;
-    transform: translateY(-50%);
-    transition: transform 0.3s ease-out;
-}
-
 .apartment input{
     width: 100%;
     border-radius: 3px;
     border: 1px solid #CCC;
     background: #FFF;
     height: 50px;
+    padding-left: 10px;
 }
 
 .apartment button {
@@ -188,25 +163,19 @@
 .location {
     position: relative;
     margin-bottom: 20px;
+    display: inline-flex;
+    width: 100%;
 }
 
 .location input {
-    width: 48%;
+    width: 100%;
     border-radius: 3px;
     border: 1px solid #CCC;
     background: #FFF;
     height: 45px;
+    padding-left: 10px;
 }
 
-.location label {
-    position: absolute;
-    pointer-events: none;
-    top: 50%;
-    margin-left: 10px;
-    color: #0000008F;
-    transform: translateY(-50%);
-    transition: transform 0.3s ease-out;
-}
 
 .save-info {
     position: relative;
@@ -219,15 +188,13 @@
     height: 20px;
     margin-bottom: 10px;
     margin-right: 5px;
+    accent-color: black;
 }
 
-.save-info label {
-    margin: 0;
-}
 
 .save-info input,
 .save-info label {
-    vertical-align: middle;
+    vertical-align: bottom;
 }
 
 .email {

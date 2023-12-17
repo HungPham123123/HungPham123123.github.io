@@ -20,6 +20,9 @@
     border: 2px solid #D9D9D9;
     margin-right: 39px;
     background: #FFF;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    opacity: 0.5;
 }
 
 .ship-method button {
@@ -76,4 +79,39 @@
     height: 100%;
     background: deepskyblue;
     background: linear-gradient(to right, deepskyblue 0%, #2ea3b7 100%);
+}
+
+.ship-method {
+    display: none;
+}
+
+
+.showMethod {
+    display: flex;
+}
+
+.choose-container button.selected {
+    border: 2px solid #000;
+    opacity: 1;
+}
+
+.choose-container button:focus {
+    outline: none;
+}
+
+.ship-method button:focus {
+    outline: none;
+    border: 2px solid #000;
+}
+
+
+.choose-container button.selected {
+    /* Add your styles for the selected state */
+    border: 2px solid #000;
+}
+
+/* Style for the disabled button */
+.ship-method button.disabled {
+    border: 2px solid #000;
+    
 }
