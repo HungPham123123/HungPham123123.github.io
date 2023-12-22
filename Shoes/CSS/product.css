@@ -224,9 +224,7 @@
 
 
 @media screen and (max-width: 1024px) {
-    .col-md-2 {
-        display: none;
-    }
+
 
     .col-md-3 {
         width: 0;
