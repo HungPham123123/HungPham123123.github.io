@@ -1010,7 +1010,7 @@ html, body {
     right: 20px;
     cursor: pointer;
     background: black;
-    z-index: 100000;
+    z-index: 10000;
   }
   #backtop:hover {
     background-color: #fff;
