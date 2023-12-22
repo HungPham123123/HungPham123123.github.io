@@ -1010,6 +1010,7 @@ html, body {
     right: 20px;
     cursor: pointer;
     background: black;
+    z-index: 100000;
   }
   #backtop:hover {
     background-color: #fff;
@@ -1017,6 +1018,7 @@ html, body {
   }
   #backtop i {
     color: #fff;
+    z-index: 100000;
   } 
   #backtop:hover i {
     color: #000;
@@ -1093,13 +1095,12 @@ html, body {
 
 @media (max-width: 768px) {
     .product-box {
-        width: calc(50% - 20px); /* Two products per row on smaller screens */
+        width: calc(50% - 20px);
     }
 }
 
-/* Add media query for even smaller screens if necessary */
 @media (max-width: 480px) {
     .product-box {
-        width: 100%; /* Single product per row on very small screens */
+        width: 100%;
     }
 }

@@ -201,31 +201,84 @@ href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
         
     
       </div>
-    <header id="header" style="padding: 20px 0;">
+      <header id="header">
         <div class="container container-header">
-            <div class="row">
-                <div class="col-md-2">
+            <div class="row header-row">
+                <div class="col-md-2 header-1">
                     <a class="header-logo" href="index.html">WALKZ</a>
+
+                    <div id="icon-navbar" class="icon-navbar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
-                <div class="col-md-8" style="justify-content: center;">
+                <div class="col-md-8 header-2" style="justify-content: center; text-align: center; width: 100%;">
                     <ul class="nav-item-box">
                         <li class="nav-item"><a href="index.html" class="underline">Home</a></li>
                         <li class="nav-item"><a href="product.html" class="underline">shop</a></li>
                         <li class="nav-item"><a href="aboutus.html" class="underline">about us</a></li>
                         <li class="nav-item"><a href="blog.html" class="underline">Blog</a></li>
                         <li class="nav-item"><a href="contact.html" class="underline">contact us</a></li>
-                    </ul>
+                    </ul>   
+                    <div class="header-small-content">
+                    <a style="display: none;" class="header-logo-smaller" href="index.html">WALKZ</a>
                 </div>
-                <div class="col-md-2">
+                </div>
+                <div class="col-md-2 header-3">
                     <ul class="icon-box">
                         <li class="nav-icon" id="search-icon"> <i class="fa-solid fa-magnifying-glass" style="font-size: 18px;"></i></li>
-                        <li class="nav-icon"><a href="login.html"> <i class="fa-regular fa-user"></i></a></li>
-                        <li class="nav-icon" id="open-cart-btn"><i class="fa-solid fa-basket-shopping"></i></li>
+                        <li class="nav-icon user-icon"><a href="login.html"> <i class="fa-regular fa-user"></i></a></li>
+                        <li style="position: relative;" class="nav-icon" id="open-cart-btn"><i class="fa-solid fa-basket-shopping"></i>
+                        <span class="amount-cart">1</span></li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
+    <div id="backMenu" class="backMenu"></div>
+    <div class="side-menu-container">
+        <div id="sidemenu" class="sidemenu">
+           
+            <div class="menu-actions">
+                <a href="" class="button-menu">
+                    <div class="icon-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span>Menu</span>
+                </a>
+                <a href="login.html" class="button-login">
+                    <span><i class="fa-regular fa-user" style="font-size: 15px; margin-right: 10px;"></i>LOGIN</span>
+                </a>
+            </div>
+
+            <div class="sidemenu-content">
+                <div class="menu-section">
+                    <div class="menu-list">
+                        <a href="index.html">HOME</a>
+                    </div>
+                    <div class="menu-list">
+                        <a href="product.html">SHOP</a>
+                    </div>
+                    <div class="menu-list">
+                        <a href="aboutus.html">ABOUT US</a>
+                    </div>
+
+                    <div class="menu-list">
+                        <a href="blog.html">BLOG</a>
+                    </div>
+                    <div class="menu-list">
+                        <a href="contact.html">CONTACT US</a>
+                    </div>
+
+                </div>
+            </div>
+            <div id="close-menu" class="close-menu">Close</div>
+
+        </div>
+    </div>
 
    
     <div id="backdrop" class="backdrop"></div>

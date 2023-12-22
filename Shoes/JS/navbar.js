@@ -25,6 +25,25 @@ function closeCart() {
     }, 500)
 }
 
+const openMenuBtn = document.getElementById('icon-navbar')
+const sideMenu = document.getElementById('sidemenu')
+const closemenu = document.getElementById('close-menu')
+const backmenu = document.getElementById('backMenu')
+
+openMenuBtn.addEventListener('click', openMenu)
+closemenu.addEventListener('click', closeMenu)
+backmenu.addEventListener('click', closeMenu)
+
+function openMenu () {
+    sideMenu.classList.add('open-menu')
+    backmenu.classList.add('show-back')
+}
+
+function closeMenu  () {
+
+    sideMenu.classList.remove('open-menu')
+    backmenu.classList.remove('show-back')
+}
 
 const searchBtn = document.getElementById('search-icon')
 const search = document.getElementById('search-bar')
