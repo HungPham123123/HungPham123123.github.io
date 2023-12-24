@@ -51,12 +51,19 @@
     top: 0;
     left: 0;
     z-index: 1; 
-    min-height: 1778px;
-    max-height: 1778px;
+    min-height: 100%;
+    height: auto; 
     display: none;
 }
 
+.subheading {
+    display: flex;
+    justify-content: space-between;
+}
 
+.filter-mobile {
+    display: none;
+}
 
 .sidebar-content {
     position: relative;
@@ -89,6 +96,9 @@
     cursor: pointer;
 }
 
+.sort-by-menu {
+    display: none;
+}
 
 .color-button {
     width: 28%;
@@ -222,6 +232,104 @@
     outline: none;
 }
 
+@media screen and (max-width: 1200px) {
+    .filter-content, .sort-by {
+        display: none;
+    }
+
+    .filter-mobile {
+        display: flex;
+        border: 1px solid #CACACB;
+        background: #fff;
+        margin-right: 20px;
+        height: 25px;
+        padding: 6px 20px;
+        border-radius: 30px;
+    }
+    
+    .filter-mobile span {
+        line-height: 10px;
+    }
+
+    #sidebar {
+        position: fixed;
+        width: 100% !important;
+        max-width: none;
+        overflow-y: scroll !important;
+        max-height: none;
+        height: 100%;
+        z-index: 1000000;
+        transform: translateY(110%);
+        display: block;
+        transition: all ease 0.5s;
+    }
+
+    #sidebar.showfiltermobile {
+        transform: translateY(0%);
+    }
+    
+
+    .apply-container {
+        position: fixed;
+        width: 100%;
+        height: 75px;
+        z-index: 10000000000;
+        background: #fff;
+        top: 91.3%;
+        border-top: 1px solid rgb(229, 229, 229);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(110%);
+        transition: all ease 0.5s;
+    }
+
+    .apply-container.applyfiltermobile {
+        transform: translateY(0%);
+    }
+
+    .apply-result-button {
+        width: 90%;
+        text-align: center;
+        border-radius: 2em;
+        height: 60%;
+        background: #000000;
+        color: #fff;
+        font-weight: 600;
+        line-height: 40px;
+    }
+
+    .sort-by-menu {
+        display: block;
+        margin-top: 30px;
+    }
+
+    .filter-close-container {
+        top: 20px;
+        right: 30px;
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        background: black;
+        z-index: 100000000000;
+        border-radius: 50%;
+        color: #fff;
+        text-align: center;
+        font-weight: 900;
+        line-height: 35px;
+        font-size: 20px;
+        transform: translateY(-150%);
+        transition: all ease 1s;
+    }
+
+    .filter-close-container.filterclose-button {
+        transform: translateY(0%);
+    }
+
+    #caretdown {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 1024px) {
 

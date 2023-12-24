@@ -30,6 +30,16 @@ function toggleIcon(button) {
     button.classList.toggle('clicked');
 }
 
+function toggleSortList() {
+    var sortList = document.getElementById("sortList");
+    sortList.style.display = (sortList.style.display === "none" || sortList.style.display === "") ? "block" : "none";
+}
+
+function toggleCategoryList() {
+    var CategoryList = document.getElementById("CategoryList");
+    CategoryList.style.display = (CategoryList.style.display === "none" || CategoryList.style.display === "") ? "block" : "none";
+}
+
 function toggleGenderList() {
     var genderList = document.getElementById("genderList");
     genderList.style.display = (genderList.style.display === "none" || genderList.style.display === "") ? "block" : "none";
@@ -126,4 +136,28 @@ function updateSortBy(value, button) {
     sortByText.innerHTML = 'Sort By: ' + value;
 
     toggleSortOption();
+}
+
+const openFilter = document.getElementById('filter-button-mobile')
+const productSideBar = document.getElementById('sidebar')
+const closeFilter = document.getElementById('close-filters')
+const applyFilter = document.getElementById('apply-container')
+
+
+
+
+openFilter.addEventListener('click', openFilters)
+closeFilter.addEventListener('click', closeFilters)
+applyFilter.addEventListener('click', closeFilters)
+
+function openFilters() {
+    productSideBar.classList.add('showfiltermobile')
+    applyFilter.classList.add('applyfiltermobile')
+    closeFilter.classList.add('filterclose-button')
+}
+
+function closeFilters () {
+    productSideBar.classList.remove('showfiltermobile')
+    applyFilter.classList.remove('applyfiltermobile')
+    closeFilter.classList.remove('filterclose-button')
 }
