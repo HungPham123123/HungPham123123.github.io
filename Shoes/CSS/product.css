@@ -232,6 +232,14 @@
     outline: none;
 }
 
+.filter-close-container {
+    display: none;
+}
+
+.apply-container {
+    display: none;
+}
+
 @media screen and (max-width: 1200px) {
     .filter-content, .sort-by {
         display: none;
@@ -320,6 +328,7 @@
         font-size: 20px;
         transform: translateY(-150%);
         transition: all ease 1s;
+        display: block;
     }
 
     .filter-close-container.filterclose-button {
