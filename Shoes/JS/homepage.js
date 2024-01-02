@@ -53,25 +53,3 @@ function togglePopup() {
 document.getElementById("popup-1").classList.toggle("active")
 }
 
-
-document.addEventListener('DOMContentLoaded', function () {
-const quantityInput = document.getElementById('quantityInput');
-const qtyMinus = document.querySelector('.qty-minus');
-const qtyPlus = document.querySelector('.qty-plus');
-
-qtyMinus.addEventListener('click', function () {
-
-    let currentValue = parseInt(quantityInput.value);
-    
-
-    if (currentValue > 1) {
-        quantityInput.value = currentValue - 1;
-    }
-});
-
-qtyPlus.addEventListener('click', function () {
-    let currentValue = parseInt(quantityInput.value);
-    
-    quantityInput.value = currentValue + 1;
-});
-});

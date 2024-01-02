@@ -43,7 +43,7 @@ function selectMethod(selectedId) {
 
 function handleShippingMethodSelection(methodName, price, button) {
     // Update the content of the "Shipping Method" section
-    document.getElementById('selectedShippingMethod').innerText = `${methodName} - $ ${price}`;
+
 
     var shipMethods = document.querySelectorAll('.ship-method button');
     for (var i = 0; i < shipMethods.length; i++) {
