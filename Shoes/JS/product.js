@@ -169,68 +169,137 @@ function closeFilters () {
 
 
 
-const productRowContent = document.querySelector(".product-row");
-const saleCheckbox = document.getElementById("saleCheckbox1");
+document.addEventListener('DOMContentLoaded', () => {
+    let cartItems = [];
+    const cartCountElement = document.querySelector('.cart-count span');
+    const cartTotalElement = document.querySelector('.total-price');
+    const cartItemsContainer = document.querySelector('.cart-items');
 
-const jsonProduct = "../product.json";
+    updateCartUI();
 
-let productData = [];
+    window.addItemToCart = function(product) {
+        try {
+            const existingItem = cartItems.find(item => item.id === product.id);
 
-const renderProducts = () => {
-    const filteredProducts = productData.filter(product => {
-        return saleCheckbox.checked ? product.discount > 0 : true;
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cartItems.push({
+                    id: product.id,
+                    productName: product.productName,
+                    quantity: 1,
+                    price: parseFloat(product.price),
+                    imgSrc: product.img
+                });
+            }
+
+            updateCartUI();
+        } catch (error) {
+            console.error('Error adding item to cart:', error);
+        }
+    };
+
+    function fetchRecentProducts() {
+        return fetch(apiEndpoint).then(response => response.json());
+    }
+
+    function updateCartUI() {
+        const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+        cartCountElement.textContent = cartCount;
+
+        cartItemsContainer.innerHTML = "";
+        cartItems.forEach(item => {
+            const productElement = createProductElement(item);
+            cartItemsContainer.appendChild(productElement);
+        });
+
+        const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+        cartTotalElement.textContent = `$${totalPrice.toFixed(2)}`;
+    }
+
+    window.removeItemFromCart = function(itemId) {
+        cartItems = cartItems.filter(item => item.id !== itemId);
+        updateCartUI();
+    };
+
+    function createProductElement(item) {
+        const productElement = document.createElement('div');
+        productElement.classList.add('product-cart');
+        productElement.innerHTML = `
+            <ol style="list-style: none;">
+                <li class="d-flex">
+                    <div class="img-product-cart">
+                        <img src="${item.imgSrc}" alt="" style="max-width: 100%;">
+                    </div>
+                    <div class="product-detail-cart">
+                        <h3 class="product-name-mini">
+                            <a href="#">${item.productName}</a>
+                        </h3>
+                        <div class="product-info-cart">
+                            <div class="product-quantity-mini">QTY : ${item.quantity}</div>
+                            <div class="product-price-mini">
+                                <span>$${(item.price * item.quantity).toFixed(2)}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-remove">
+                        <a href="#" onclick="removeItemFromCart(${item.id})"><i class="fa-solid fa-trash"></i></a>
+                    </div>
+                </li>
+            </ol>
+        `;
+        return productElement;
+    }
+
+    fetchRecentProducts().then(products => {
+        products.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+        const recentProducts = products.slice(0, 9);
+        renderRecentProducts(recentProducts);
     });
 
-    productRowContent.innerHTML = "";
-    filteredProducts.forEach(product => {
-        const { id, name, price, img, discount } = product;
+    function renderRecentProducts(products) {
+        const recentProductsContainer = document.getElementById('recentProductsContainer');
+        products.forEach(product => {
+            const { id, productName, price, img, discount } = product;
+            const discountedPrice = (price * (100 - discount) / 100).toFixed(2);
 
-        const discountedPrice = (price * (100 - discount) / 100).toFixed(2);
-
-        productRowContent.innerHTML += `
-            <div class="product-box" data-product-id="${id}">
+            const productElement = document.createElement('div');
+            productElement.classList.add('product-box');
+            productElement.innerHTML = `
                 <div class="product">
-                    <div class="img-product">
+                    <div style="display: flex; justify-content: center; align-items: center;" class="img-product">
                         <a href="">
-                            <img style="width: 100%;" src="${img}" alt="${name}">
+                            <img style="max-width: 450px; max-height: 450px;" src="${img}" alt="${productName}">
                         </a>
-
                         <ul class="product-icon">
-                            <li class="add-cart mr-0">
-                                <a href="">
+                            <li class="add-cart mr-0" onclick="addItemToCart(${JSON.stringify(product)})">
+                                <a href="#">
                                     <i class="fa-solid fa-bag-shopping icon-1"></i>
                                 </a>
                             </li>
                             <li class="view-product mr-0">
-                                <a href="">
+                                <button onclick="togglePopup()" href="#">
                                     <i class="fa-solid fa-magnifying-glass icon-2"></i>
-                                </a>
+                                </button>
                             </li>
                             <li class="add-favorite mr-0">
-                                <a href="">
+                                <a href="#">
                                     <i class="fa-regular fa-heart icon-3"></i>
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <h4 class="product-title">
-                        <a href="">${name}</a>
+                        <a href="#">${productName}</a>
                     </h4>
                     <p class="product-price">
                         ${discount > 0 ? `<s class="">$${price}</s>` : ''}
                         <span class="">$${discountedPrice}</span>
                     </p>
-                </div>  
-            </div>
-        `;
-    });
-};
+                </div>
+            `;
 
-fetch(jsonProduct)
-    .then(response => response.json())
-    .then(data => {
-        productData = data;
-        renderProducts();
-    });
-
-saleCheckbox.addEventListener("change", renderProducts);
+            recentProductsContainer.appendChild(productElement);
+        });
+    }
+});

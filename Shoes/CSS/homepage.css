@@ -216,6 +216,7 @@ html, body {
 
 .product-icon li {
     margin-bottom: 2%;
+    cursor: pointer;
 }
 
 
@@ -239,6 +240,11 @@ html, body {
     background: #fff;
     text-align:center;
     line-height:46px;
+    cursor: pointer;
+}
+
+.product-icon li button {
+    cursor: pointer;
 }
 
 .product-icon li a:hover {
