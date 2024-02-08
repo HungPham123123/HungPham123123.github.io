@@ -44,28 +44,6 @@ signUpForm.addEventListener('submit', function(event) {
   // All inputs are valid, proceed with form submission
   signUpForm.submit();
 
-    fetch('https://659a6480652b843dea538305.mockapi.io/users', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(userData),
-  })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(data => {
-    // Handle successful registration
-    console.log('User registered successfully:', data);
-    // You can redirect the user to a new page or show a success message here
-  })
-  .catch(error => {
-    console.error('There was an error registering the user:', error);
-    // Handle errors, show error messages, etc.
-  });
 });
 
 signInForm.addEventListener('submits', function(event) {
@@ -158,7 +136,7 @@ document.getElementById("signup-form").addEventListener("submit", function(event
           email: email,
           password: formData.get("password")
       };
-r
+
       return fetch("https://659a6480652b843dea538305.mockapi.io/users", {
           method: "POST",
           headers: {
@@ -174,12 +152,13 @@ r
       return response.json();
   })
   .then(data => {
-      showError(document.getElementById("email"), "Account created successfully!");
+      showSuccess(document.getElementById("email"), "Account created successfully!");
   })
   .catch(error => {
       console.error("There was a problem creating the user:", error);
   });
 });
+
 
 function showError(inputElement, errorMessage) {
   clearMessages();
@@ -192,7 +171,7 @@ function showError(inputElement, errorMessage) {
   containerElement.appendChild(errorElement);
 }
 
-function showError(inputElement, successMessage) {
+function showSuccess(inputElement, successMessage) {
   clearMessages();
 
   var successElement = document.createElement('p');
@@ -203,9 +182,47 @@ function showError(inputElement, successMessage) {
   containerElement.appendChild(successElement);
 }
 
+
+
 function clearMessages() {
   var existingMessages = document.querySelectorAll('.error-message, .success-message');
   existingMessages.forEach(function(message) {
       message.remove();
   });
 }
+
+document.querySelector('.sign-in form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const email = document.getElementById('emails').value.trim();
+  const password = document.getElementById('passwords').value.trim();
+
+
+  fetch("https://659a6480652b843dea538305.mockapi.io/users")
+  .then(response => {
+      if (!response.ok) {
+          throw new Error("Failed to fetch user data");
+      }
+      return response.json();
+  })
+  .then(users => {
+    const user = users.find(user => user.email === email);
+    if (user && user.password === password) {
+      window.location.href = "../navbarloginsucess.html";
+    } else {
+        showError(document.querySelector('.sign-in button'), "Wrong email or password.");
+    }
+  })
+  .catch(error => {
+      console.error("There was a problem signing in:", error);
+  });
+});
+
+
+function clearMessages() {
+  var existingMessages = document.querySelectorAll('.error-message, .success-message');
+  existingMessages.forEach(function(message) {
+      message.remove();
+  });
+}
+
