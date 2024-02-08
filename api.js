@@ -1,10 +1,14 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const apiEndpoint = 'https://659a6480652b843dea538305.mockapi.io/Product';
+    apiEndpointUsers = 'https://659a6480652b843dea538305.mockapi.io/users'; // Assign apiEndpointUsers here
+    const apiEndpointProducts = 'https://659a6480652b843dea538305.mockapi.io/Product';
 
     try {
-        const response = await fetch(apiEndpoint);
-        const data = await response.json();
-        renderRecentProducts(data);
+        const usersResponse = await fetch(apiEndpointUsers);
+        const productsResponse = await fetch(apiEndpointProducts);
+
+        const usersData = await usersResponse.json();
+        const productsData = await productsResponse.json();
+
     } catch (error) {
         console.error('Error fetching API data:', error);
     }
