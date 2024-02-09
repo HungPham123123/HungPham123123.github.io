@@ -116,6 +116,19 @@ document.getElementById("signup-form").addEventListener("submit", function(event
   const formData = new FormData(event.target);
   const username = formData.get("name");
   const email = formData.get("email");
+  const password = formData.get("password");
+
+  if (password.length < 8) {
+    return;
+  }
+
+  if (username.length < 2) {
+    return;
+  }
+
+  if (!email.endsWith("@gmail.com") && !email.endsWith("@hotmail.com")) {
+    return;
+  }
 
   fetch("https://659a6480652b843dea538305.mockapi.io/users")
   .then(response => {
