@@ -16,11 +16,12 @@ searchInput.addEventListener('input', async function(event) {
 });
 
 searchForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    const query = searchInput.value.trim();
-    if (query) {
-        window.location.href = `SearchResult.html?type=product&q=${query}`;
-    }
+  event.preventDefault();
+  const query = searchInput.value.trim();
+  if (query) {
+      const encodedQuery = encodeURIComponent(query).replace(/%20/g, '+');
+      window.location.href = `SearchResult.html?type=product&q=${encodedQuery}`;
+  }
 });
 
 async function searchProducts(query) {
