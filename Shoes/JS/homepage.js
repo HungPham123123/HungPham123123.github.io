@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addItemToCart = async function(productId) {
     try {
-        const response = await fetch(`https://659a6480652b843dea538305.mockapi.io/Product/${productId}`);
+        const response = await fetch(`https://659a6480652b843dea538305.mockapi.io/Product`);
         const product = await response.json();
 
         const existingItem = cartItems.find(item => item.id === product.id);

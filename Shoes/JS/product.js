@@ -162,13 +162,6 @@ function closeFilters () {
     closeFilter.classList.remove('filterclose-button')
 }
 
-
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     let cartItems = [];
     const cartCountElement = document.querySelector('.cart-count span');
@@ -199,9 +192,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    function fetchRecentProducts() {
-        return fetch(apiEndpoint).then(response => response.json());
-    }
 
     function updateCartUI() {
         const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
@@ -251,55 +241,4 @@ document.addEventListener('DOMContentLoaded', () => {
         return productElement;
     }
 
-    fetchRecentProducts().then(products => {
-        products.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
-        const recentProducts = products.slice(0, 9);
-        renderRecentProducts(recentProducts);
-    });
-
-    function renderRecentProducts(products) {
-        const recentProductsContainer = document.getElementById('recentProductsContainer');
-        products.forEach(product => {
-            const { id, productName, price, img, discount } = product;
-            const discountedPrice = (price * (100 - discount) / 100).toFixed(2);
-
-            const productElement = document.createElement('div');
-            productElement.classList.add('product-box');
-            productElement.innerHTML = `
-                <div class="product">
-                    <div style="display: flex; justify-content: center; align-items: center;" class="img-product">
-                        <a href="">
-                            <img style="max-width: 450px; max-height: 450px;" src="${img}" alt="${productName}">
-                        </a>
-                        <ul class="product-icon">
-                            <li class="add-cart mr-0" onclick="addItemToCart(${JSON.stringify(product)})">
-                                <a href="#">
-                                    <i class="fa-solid fa-bag-shopping icon-1"></i>
-                                </a>
-                            </li>
-                            <li class="view-product mr-0">
-                                <button onclick="togglePopup()" href="#">
-                                    <i class="fa-solid fa-magnifying-glass icon-2"></i>
-                                </button>
-                            </li>
-                            <li class="add-favorite mr-0">
-                                <a href="#">
-                                    <i class="fa-regular fa-heart icon-3"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <h4 class="product-title">
-                        <a href="#">${productName}</a>
-                    </h4>
-                    <p class="product-price">
-                        ${discount > 0 ? `<s class="">$${price}</s>` : ''}
-                        <span class="">$${discountedPrice}</span>
-                    </p>
-                </div>
-            `;
-
-            recentProductsContainer.appendChild(productElement);
-        });
-    }
 });

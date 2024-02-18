@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="x-icon" href="walkz icon.png">
     <link rel="stylesheet" href="Shoes/CSS/homepage.css">
     <link rel="stylesheet" href="Shoes/CSS/SearchResult.css">
     <link rel="stylesheet" href="Shoes/CSS/navbar.css">
@@ -13,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>Hello, world!</title>
+    <title id="update-search-title"></title>
   </head>
   <body>
     <div id="backdrop2" class="backdrop2"></div>
@@ -269,254 +270,30 @@
     </div>
 
     <section>
-        <div class="containe py-5">
+        <div class="container py-5">
             <div class="text-center">
-                <h3 class="text-uppercase h5">YOUR SEARCH FOR "21N1" REVEALED THE FOLLOWING:</h3>
+                <h3 class="text-uppercase h5" id="searchResultMessage"></h3>
             </div>
         </div>
     </section>
 
-    <div class="container my-3 my-lg-5" style="max-width: 1440px;">
-        <div class="row">
-            <div class="product-box">
-                <div class="product">
-                    <div class="img-product">
-                        <a href="">
-                            <img style="width: 100%;" src="Shoes/IMAGES/Home_Page_Picture/shoes2.webp" alt="">
-                        </a>
+    <div class="container my-3 my-lg-5" style="max-width: 1440px;" id="searchResultContainer">
+       <div class="row" id="resultRow">
 
-                        <figure style="background: #e12c43; color: #ffffff;" class="label-sale">
-                            <span>-34%</span>
-                        </figure>
-
-                        <ul class="product-icon">
-                            <li class="add-cart mr-0">
-                                <a href="">
-                                    <i class="fa-solid fa-bag-shopping icon-1"></i>
-                                </a>
-                            </li>
-                            <li class="view-product mr-0">
-                                <button onclick="togglePopup()" href="">
-                                    <i class="fa-solid fa-magnifying-glass icon-2"></i>
-                                </button>
-                            </li>
-                            <li class="add-favorite mr-0">
-                                <a href="">
-                                    <i class="fa-regular fa-heart icon-3"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <h4 class="product-title">
-                        <a href="">Vapor Cage 4</a>
-                    </h4>
-                    <p class="product-price">
-                        <s class="">$135.00</s>
-                        <span class="">$90.00</span>
-                    </p>
-                </div>  
-            </div>
-            <div class="product-box">
-                <div class="product">
-                    <div class="img-product">
-                        <a href="">
-                            <img style="width: 100%;" src="Shoes/IMAGES/Home_Page_Picture/shoes2.webp" alt="">
-                        </a>
-
-                        <figure style="background: #e12c43; color: #ffffff;" class="label-sale">
-                            <span>-34%</span>
-                        </figure>
-
-                        <ul class="product-icon">
-                            <li class="add-cart mr-0">
-                                <a href="">
-                                    <i class="fa-solid fa-bag-shopping icon-1"></i>
-                                </a>
-                            </li>
-                            <li class="view-product mr-0">
-                                <button onclick="togglePopup()" href="">
-                                    <i class="fa-solid fa-magnifying-glass icon-2"></i>
-                                </button>
-                            </li>
-                            <li class="add-favorite mr-0">
-                                <a href="">
-                                    <i class="fa-regular fa-heart icon-3"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <h4 class="product-title">
-                        <a href="">Vapor Cage 4</a>
-                    </h4>
-                    <p class="product-price">
-                        <s class="">$135.00</s>
-                        <span class="">$90.00</span>
-                    </p>
-                </div>  
-            </div>
-            <div class="product-box">
-                <div class="product">
-                    <div class="img-product">
-                        <a href="">
-                            <img style="width: 100%;" src="Shoes/IMAGES/Home_Page_Picture/shoes2.webp" alt="">
-                        </a>
-
-                        <figure style="background: #e12c43; color: #ffffff;" class="label-sale">
-                            <span>-34%</span>
-                        </figure>
-
-                        <ul class="product-icon">
-                            <li class="add-cart mr-0">
-                                <a href="">
-                                    <i class="fa-solid fa-bag-shopping icon-1"></i>
-                                </a>
-                            </li>
-                            <li class="view-product mr-0">
-                                <button onclick="togglePopup()" href="">
-                                    <i class="fa-solid fa-magnifying-glass icon-2"></i>
-                                </button>
-                            </li>
-                            <li class="add-favorite mr-0">
-                                <a href="">
-                                    <i class="fa-regular fa-heart icon-3"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <h4 class="product-title">
-                        <a href="">Vapor Cage 4</a>
-                    </h4>
-                    <p class="product-price">
-                        <s class="">$135.00</s>
-                        <span class="">$90.00</span>
-                    </p>
-                </div>  
-            </div>
-            <div class="product-box">
-                <div class="product">
-                    <div class="img-product">
-                        <a href="">
-                            <img style="width: 100%;" src="Shoes/IMAGES/Home_Page_Picture/shoes2.webp" alt="">
-                        </a>
-
-                        <figure style="background: #e12c43; color: #ffffff;" class="label-sale">
-                            <span>-34%</span>
-                        </figure>
-
-                        <ul class="product-icon">
-                            <li class="add-cart mr-0">
-                                <a href="">
-                                    <i class="fa-solid fa-bag-shopping icon-1"></i>
-                                </a>
-                            </li>
-                            <li class="view-product mr-0">
-                                <button onclick="togglePopup()" href="">
-                                    <i class="fa-solid fa-magnifying-glass icon-2"></i>
-                                </button>
-                            </li>
-                            <li class="add-favorite mr-0">
-                                <a href="">
-                                    <i class="fa-regular fa-heart icon-3"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <h4 class="product-title">
-                        <a href="">Vapor Cage 4</a>
-                    </h4>
-                    <p class="product-price">
-                        <s class="">$135.00</s>
-                        <span class="">$90.00</span>
-                    </p>
-                </div>  
-            </div>
-            <div class="product-box">
-                <div class="product">
-                    <div class="img-product">
-                        <a href="">
-                            <img style="width: 100%;" src="Shoes/IMAGES/Home_Page_Picture/shoes2.webp" alt="">
-                        </a>
-
-                        <figure style="background: #e12c43; color: #ffffff;" class="label-sale">
-                            <span>-34%</span>
-                        </figure>
-
-                        <ul class="product-icon">
-                            <li class="add-cart mr-0">
-                                <a href="">
-                                    <i class="fa-solid fa-bag-shopping icon-1"></i>
-                                </a>
-                            </li>
-                            <li class="view-product mr-0">
-                                <button onclick="togglePopup()" href="">
-                                    <i class="fa-solid fa-magnifying-glass icon-2"></i>
-                                </button>
-                            </li>
-                            <li class="add-favorite mr-0">
-                                <a href="">
-                                    <i class="fa-regular fa-heart icon-3"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <h4 class="product-title">
-                        <a href="">Vapor Cage 4</a>
-                    </h4>
-                    <p class="product-price">
-                        <s class="">$135.00</s>
-                        <span class="">$90.00</span>
-                    </p>
-                </div>  
-            </div>
-            <div class="product-box">
-                <div class="product">
-                    <div class="img-product">
-                        <a href="">
-                            <img style="width: 100%;" src="Shoes/IMAGES/Home_Page_Picture/shoes2.webp" alt="">
-                        </a>
-
-                        <figure style="background: #e12c43; color: #ffffff;" class="label-sale">
-                            <span>-34%</span>
-                        </figure>
-
-                        <ul class="product-icon">
-                            <li class="add-cart mr-0">
-                                <a href="">
-                                    <i class="fa-solid fa-bag-shopping icon-1"></i>
-                                </a>
-                            </li>
-                            <li class="view-product mr-0">
-                                <button onclick="togglePopup()" href="">
-                                    <i class="fa-solid fa-magnifying-glass icon-2"></i>
-                                </button>
-                            </li>
-                            <li class="add-favorite mr-0">
-                                <a href="">
-                                    <i class="fa-regular fa-heart icon-3"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <h4 class="product-title">
-                        <a href="">Vapor Cage 4</a>
-                    </h4>
-                    <p class="product-price">
-                        <s class="">$135.00</s>
-                        <span class="">$90.00</span>
-                    </p>
-                </div>  
-            </div>
-
-
-
-
-        </div>
+       </div>
     </div>
+   
+</body>
+</html>
+    
 
 
 
     <script src="Shoes/JS/scroll.js"></script>
     <script src="Shoes/JS/navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="Shoes/JS/resultsite.js"></script>
+    <script src="Shoes/JS/search.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
