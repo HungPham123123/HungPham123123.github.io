@@ -463,7 +463,7 @@ header {
     transform: translateY(0);
     transition-delay: .3s;
     opacity: 1;
-    width: 900px;
+    max-width: 900px;
     margin: 0 auto;
     position: relative;
     transition: all .6s linear;
